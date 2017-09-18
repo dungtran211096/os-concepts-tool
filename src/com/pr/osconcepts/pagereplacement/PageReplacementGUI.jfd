@@ -1,0 +1,236 @@
+JFDML JFormDesigner: "5.2.2.2.228" Java: "1.8.0_77" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			"title": "Page Replacement"
+			"$sizePolicy": 1
+			"resizable": false
+			"defaultCloseOperation": 2
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "DataPn"
+				"border": new javax.swing.border.TitledBorder( "Data" )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "FrameSizeLB"
+					"text": "Frame"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 10
+					"y": 15
+					"height": 20
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "FrameSizeTF"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "FrameSizeTFKeyReleased", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 45
+					"y": 15
+					"width": 25
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "OrderLB"
+					"text": "Order"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 10
+					"y": 40
+					"height": 20
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "OrderTF"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "OrderTFKeyReleased", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 45
+					"y": 40
+					"width": 405
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "HeadLB"
+					"text": "Pointer at frame"
+					"visible": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 80
+					"y": 15
+					"height": 20
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "HeadTF"
+					"visible": false
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "HeadTFKeyReleased", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 160
+					"y": 15
+					"width": 25
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 5
+				"y": 5
+				"height": 80
+				"width": 455
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "AnsPn"
+				"border": new javax.swing.border.TitledBorder( "Result" )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "PRLB"
+					"text": "Page Replaced"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 200
+					"y": 20
+					"height": 20
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "PFLB"
+					"text": "Page Fault"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 10
+					"y": 20
+					"height": 20
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "PFTF"
+					"editable": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 80
+					"y": 20
+					"width": 30
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "PRTF"
+					"editable": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 30
+					"height": 20
+					"x": 280
+					"y": 20
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "SwappedOutLB"
+					"text": "Swapped out"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 10
+					"y": 45
+					"height": 20
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "SwappedOutTF"
+					"editable": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 80
+					"y": 45
+					"width": 230
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "FtedPageLB"
+					"text": "Faulted Pages"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"height": 20
+					"x": 10
+					"y": 70
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "FtedPageTF"
+					"editable": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 230
+					"height": 20
+					"x": 80
+					"y": 70
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "SCAnsPn"
+					"visible": false
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "AnsRefLB"
+						"text": "<html>Reference </br> bits after </html>"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 0
+						"y": 0
+						"width": 65
+						"height": 35
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "AnsRefTF"
+						"editable": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 70
+						"y": 7
+						"width": 230
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 10
+					"y": 90
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 145
+				"y": 90
+				"width": 315
+				"height": 155
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "ModePn"
+				"border": new javax.swing.border.TitledBorder( "Algorithms" )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "FIFOBTN"
+					"text": "First In First Out"
+					"$buttonGroup": new FormReference( "ModeBTN" )
+					"selected": true
+					addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "FIFOBTNItemStateChanged", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 5
+					"y": 20
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "LRUBTN"
+					"text": "Least Recently Use"
+					"$buttonGroup": new FormReference( "ModeBTN" )
+					addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "LRUBTNItemStateChanged", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 5
+					"y": 45
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "OptimalBTN"
+					"text": "Optimal"
+					"$buttonGroup": new FormReference( "ModeBTN" )
+					addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "OptimalBTNItemStateChanged", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 5
+					"y": 70
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "LFUBTN"
+					"text": "Least Frequently Use"
+					"$buttonGroup": new FormReference( "ModeBTN" )
+					addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "LFUBTNItemStateChanged", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 5
+					"y": 95
+				} )
+				add( new FormComponent( "javax.swing.JRadioButton" ) {
+					name: "SecondChanceBTN"
+					"text": "Second Chance"
+					"$buttonGroup": new FormReference( "ModeBTN" )
+					"toolTipText": "Xấp xỉ LRU, Đồng hồ"
+					addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "SecondChanceBTNItemStateChanged", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 5
+					"y": 120
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 5
+				"y": 90
+				"width": 140
+				"height": 155
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 5, 25 )
+			"size": new java.awt.Dimension( 470, 280 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "ModeBTN"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 380 )
+		} )
+	}
+}

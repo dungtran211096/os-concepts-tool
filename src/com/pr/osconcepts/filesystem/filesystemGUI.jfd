@@ -1,0 +1,794 @@
+JFDML JFormDesigner: "5.2.2.2.228" Java: "1.8.0_77" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			"defaultCloseOperation": 2
+			"resizable": false
+			"title": "File Allocation"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "contigousAllo"
+				"border": new javax.swing.border.TitledBorder( "Contigous Allocation" )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "block_offset"
+					"border": new javax.swing.border.TitledBorder( "Block, Offset" )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "file_size_lb_bo"
+						"text": "File size"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 20
+						"height": 20
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "blk_size_lb_bo"
+						"text": "Block size"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 40
+						"height": 20
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "x_lb_bo"
+						"text": "x"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 60
+						"height": 20
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "max_blk_lb_bo"
+						"text": "Max block"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 80
+						"height": 20
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "result_bo"
+						"horizontalAlignment": 0
+						"text": "Result"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 20
+						"y": 110
+						"width": 120
+						"height": 25
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "file_size_tf_bo"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "file_size_tf_boKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 67
+						"y": 20
+						"width": 45
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "blk_size_tf_bo"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "blk_size_tf_boKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 67
+						"y": 40
+						"width": 45
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "x_tf_bo"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "x_tf_boKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 67
+						"y": 60
+						"width": 45
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "max_blk_tf_bo"
+						"editable": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 67
+						"y": 80
+						"width": 97
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "file_size_cb_bo"
+						"model": &DefaultComboBoxModel0 new javax.swing.DefaultComboBoxModel {
+							selectedItem: "bytes"
+							addElement( "bytes" )
+							addElement( "KB" )
+							addElement( "MB" )
+							addElement( "GB" )
+						}
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "file_size_cb_boItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 112
+						"y": 20
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "blk_size_cb_bo"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "blk_size_cb_boItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 112
+						"y": 40
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "x_cb_bo"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "x_cb_boItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 112
+						"y": 60
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 5
+					"y": 15
+					"width": 170
+					"height": 145
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "extend_base"
+					"border": new javax.swing.border.TitledBorder( "Extend-base" )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "file_size_lb_eb"
+						"text": "File size"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 37
+						"height": 20
+						"x": 10
+						"y": 20
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "blk_size_lb_eb"
+						"text": "Block size"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 10
+						"y": 40
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "x_lb_eb"
+						"text": "x"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"height": 20
+						"x": 10
+						"y": 60
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "ext_size_lb_eb"
+						"text": "Extend size"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"height": 20
+						"x": 10
+						"y": 80
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "result_eb"
+						"horizontalAlignment": 0
+						"text": "Result"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 135
+						"height": 25
+						"x": 20
+						"y": 110
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "file_size_tf_eb"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "file_size_tf_ebKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 70
+						"y": 20
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "blk_size_tf_eb"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "blk_size_tf_ebKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 70
+						"y": 40
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "x_tf_eb"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "x_tf_ebKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 70
+						"y": 60
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "ext_size_tf_eb"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "ext_size_tf_ebKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 70
+						"y": 80
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "file_size_cb_eb"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "file_size_cb_ebItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 115
+						"y": 20
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "blk_size_cb_eb"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "blk_size_cb_ebItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 115
+						"y": 40
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "x_cb_eb"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "x_cb_ebItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 115
+						"y": 60
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 175
+					"y": 15
+					"width": 175
+					"height": 145
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 0
+				"y": 0
+				"width": 355
+				"height": 165
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "linkedlistAllo"
+				"border": new javax.swing.border.TitledBorder( "Linked List Allocation" )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "block_offset_linked"
+					"border": new javax.swing.border.TitledBorder( "Linked List Allocation" )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "file_size_lb_bo_linked"
+						"text": "File size"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 20
+						"height": 20
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "blk_size_lb_bo_linked"
+						"text": "Block size"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 40
+						"height": 20
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "x_lb_bo_linked"
+						"text": "x"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 60
+						"height": 20
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "pointer_size_lb_bo_linked"
+						"text": "Pointer size"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 80
+						"height": 20
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "result_bo_linked"
+						"horizontalAlignment": 0
+						"text": "Result"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 20
+						"y": 105
+						"width": 120
+						"height": 25
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "file_size_tf_bo_linked"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "file_size_tf_bo_linkedKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 67
+						"y": 20
+						"width": 45
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "blk_size_tf_bo_linked"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "blk_size_tf_bo_linkedKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 67
+						"y": 40
+						"width": 45
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "x_tf_bo_linked"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "x_tf_bo_linkedKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 67
+						"y": 60
+						"width": 45
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "pointer_size_tf_bo_linked"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "pointer_size_tf_bo_linkedKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 67
+						"y": 80
+						"width": 45
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "file_size_cb_bo_linked"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "file_size_cb_bo_linkedItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 112
+						"y": 20
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "blk_size_cb_bo_linked"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "blk_size_cb_bo_linkedItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 112
+						"y": 40
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "x_cb_bo_linked"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "x_cb_bo_linkedItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 112
+						"y": 60
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "pointer_size_cb_bo_linked"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "pointer_size_cb_bo_linkedItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 112
+						"y": 80
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 5
+					"y": 15
+					"width": 170
+					"height": 135
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "linkedindex"
+					"border": new javax.swing.border.TitledBorder( "Linked index block Allocation" )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "file_size_lb_li_linked"
+						"text": "File size"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 37
+						"height": 20
+						"x": 10
+						"y": 20
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "blk_size_lb_li_linked"
+						"text": "Block size"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 10
+						"y": 40
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "x_lb_li_linked"
+						"text": "x"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"height": 20
+						"x": 10
+						"y": 60
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "pointer_size_lb_li_linked"
+						"text": "Pointer size"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"height": 20
+						"x": 10
+						"y": 80
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "result_li_linked"
+						"horizontalAlignment": 0
+						"text": "Result"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 135
+						"height": 25
+						"x": 20
+						"y": 105
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "file_size_tf_li_linked"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "file_size_tf_li_linkedKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 70
+						"y": 20
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "blk_size_tf_li_linked"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "blk_size_tf_li_linkedKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 70
+						"y": 40
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "x_tf_li_linked"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "x_tf_li_linkedKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 70
+						"y": 60
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "pointer_size_tf_li_linked"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "pointer_size_tf_li_linkedKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 70
+						"y": 80
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "file_size_cb_li_linked"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "file_size_cb_li_linkedItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 115
+						"y": 20
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "blk_size_cb_li_linked"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "file_size_cb_li_linkedItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 115
+						"y": 40
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "x_cb_li_linked"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "file_size_cb_li_linkedItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 115
+						"y": 60
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "pointer_size_cb_li_linked"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "file_size_cb_li_linkedItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 115
+						"y": 80
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 175
+					"y": 15
+					"width": 175
+					"height": 135
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "twolevelindex"
+					"border": new javax.swing.border.TitledBorder( "Two-level Index" )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "file_size_lb_li_linked2lv"
+						"text": "File size"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 37
+						"height": 20
+						"x": 10
+						"y": 20
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "blk_size_lb_li_linked2lv"
+						"text": "Block size"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 10
+						"y": 40
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "x_lb_li_linked2lv"
+						"text": "x"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"height": 20
+						"x": 10
+						"y": 60
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "pointer_size_lb_li_linked2lv"
+						"text": "Pointer size"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"height": 20
+						"x": 10
+						"y": 80
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "result_li_linked2lv"
+						"horizontalAlignment": 0
+						"text": "Result"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 135
+						"height": 25
+						"x": 20
+						"y": 125
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "file_size_tf_li_linked2lv"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "file_size_tf_li_linked2lvKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 70
+						"y": 20
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "blk_size_tf_li_linked2lv"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "blk_size_tf_li_linked2lvKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 70
+						"y": 40
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "x_tf_li_linked2lv"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "x_tf_li_linked2lvKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 70
+						"y": 60
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "pointer_size_tf_li_linked2lv"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "pointer_size_tf_li_linked2lvKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 70
+						"y": 80
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "file_size_cb_li_linked2lv"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "file_size_cb_li_linked2lvItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 115
+						"y": 20
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "blk_size_cb_li_linked2lv"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "blk_size_cb_li_linked2lvItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 115
+						"y": 40
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "x_cb_li_linked2lv"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "x_cb_li_linked2lvItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 115
+						"y": 60
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "pointer_size_cb_li_linked2lv"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "pointer_size_cb_li_linked2lvItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 115
+						"y": 80
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 160
+					"x": 0
+					"y": 150
+				} )
+				add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+					name: "twolevelindex2"
+					"border": new javax.swing.border.TitledBorder( "Indexed Allocation" )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "file_size_lb_li_linked2lv2"
+						"text": "File size"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 37
+						"height": 20
+						"x": 10
+						"y": 20
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "blk_size_lb_li_linked2lv2"
+						"text": "Block size"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 10
+						"y": 40
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "x_lb_li_linked2lv2"
+						"text": "x"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"height": 20
+						"x": 10
+						"y": 60
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "pointer_size_lb_li_linked2lv2"
+						"text": "Pointer size"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"height": 20
+						"x": 10
+						"y": 80
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "result_indexed"
+						"horizontalAlignment": 0
+						"text": "Result"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 135
+						"height": 25
+						"x": 20
+						"y": 125
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "file_size_tf_indexed"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "file_size_tf_indexedKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 70
+						"y": 20
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "blk_size_tf_indexed"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "file_size_tf_indexedKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 70
+						"y": 40
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "x_tf_indexed"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "file_size_tf_indexedKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 70
+						"y": 60
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "pointer_size_tf_indexed"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "file_size_tf_indexedKeyReleased", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 45
+						"height": 20
+						"x": 70
+						"y": 80
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "file_size_cb_indexed"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "file_size_cb_indexedItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 115
+						"y": 20
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "blk_size_cb_indexed"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "file_size_cb_indexedItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 115
+						"y": 40
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "x_cb_indexed"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "file_size_cb_indexedItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 115
+						"y": 60
+					} )
+					add( new FormComponent( "javax.swing.JComboBox" ) {
+						name: "pointer_size_cb_indexed"
+						"model": #DefaultComboBoxModel0
+						addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "file_size_cb_indexedItemStateChanged", true ) )
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"width": 52
+						"height": 20
+						"x": 115
+						"y": 80
+					} )
+					add( new FormComponent( "javax.swing.JLabel" ) {
+						name: "label7"
+						"text": "Size max"
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 10
+						"y": 100
+						"height": 20
+					} )
+					add( new FormComponent( "javax.swing.JTextField" ) {
+						name: "Size_max_tf_indexed"
+						"editable": false
+					}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+						"x": 70
+						"y": 100
+						"width": 97
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 175
+					"height": 160
+					"x": 175
+					"y": 150
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 355
+				"height": 315
+				"x": 0
+				"y": 170
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 580, 740 )
+		} )
+	}
+}

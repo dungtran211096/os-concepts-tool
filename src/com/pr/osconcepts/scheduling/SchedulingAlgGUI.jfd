@@ -1,0 +1,184 @@
+JFDML JFormDesigner: "5.2.2.2.228" Java: "1.8.0_66" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			"resizable": false
+			"$sizePolicy": 1
+			"title": "Scheduling Algorithm"
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "FCFSButton"
+				"text": "First Come First Served"
+				"$buttonGroup": new FormReference( "AlgorithmSelector" )
+				"selected": true
+				addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "FCFSButtonItemStateChanged", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 5
+				"y": 10
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "SJNButton"
+				"text": "<html>Shortest Job Next<br/>(Non-preemptive SJF)</html>"
+				"$buttonGroup": new FormReference( "AlgorithmSelector" )
+				addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "SJNButtonItemStateChanged", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 5
+				"y": 35
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "SRTFButton"
+				"text": "<html>Shortest Remaining Time First<br/>(Preemptive SJF)<html>"
+				"$buttonGroup": new FormReference( "AlgorithmSelector" )
+				addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "SRTFButtonItemStateChanged", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 5
+				"y": 70
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "RRButton"
+				"text": "Round Robin"
+				"$buttonGroup": new FormReference( "AlgorithmSelector" )
+				addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "RRButtonItemStateChanged", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 5
+				"y": 110
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "debaiSP"
+				add( new FormComponent( "javax.swing.JEditorPane" ) {
+					name: "NhapDeBai"
+					"text": "Burst  Appear[Ent]"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "NhapDeBaiKeyReleased", true ) )
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "NhapDeBaiMouseClicked", true ) )
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 205
+				"y": 10
+				"height": 125
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "OrderSP"
+				add( new FormComponent( "javax.swing.JEditorPane" ) {
+					name: "OrderProcess"
+					"editable": false
+					"background": new java.awt.Color( 240, 240, 240, 255 )
+					"text": "Order"
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 315
+				"y": 10
+				"height": 125
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "ThroughputLabel"
+				"text": "<html>Thông lượng<br/>Throughput</html>"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 5
+				"y": 145
+				"height": 30
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "ThroughputTF"
+				"background": new java.awt.Color( 240, 240, 240, 255 )
+				"editable": false
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 110
+				"y": 150
+				"width": 315
+				"height": 25
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "TurnAroundTimeLabel"
+				"text": "<html>Thời gian hoàn thiện<br/>Turn Around Time</html>"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"height": 30
+				"x": 5
+				"y": 180
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "TurnAroundTimeTF"
+				"background": new java.awt.Color( 240, 240, 240, 255 )
+				"editable": false
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 315
+				"height": 25
+				"x": 110
+				"y": 185
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "WaitingTimeLabel"
+				"text": "<html>Thời gian chờ đợi<br/>Waiting Time</html>"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"height": 30
+				"x": 5
+				"y": 230
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "WaitingTimeTF"
+				"background": new java.awt.Color( 240, 240, 240, 255 )
+				"editable": false
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 315
+				"height": 25
+				"x": 110
+				"y": 220
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "ResponseTimeLabel"
+				"text": "<html>Thời gian phản hồi<br/>Response Time</html>"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"height": 30
+				"x": 5
+				"y": 275
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "ResponseTimeTF"
+				"background": new java.awt.Color( 240, 240, 240, 255 )
+				"editable": false
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 315
+				"height": 25
+				"x": 110
+				"y": 280
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "AverageWaitingTimeTF"
+				"background": new java.awt.Color( 240, 240, 240, 255 )
+				"editable": false
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 315
+				"height": 25
+				"x": 110
+				"y": 245
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "TQText"
+				addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "TQTextKeyReleased", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 170
+				"y": 110
+				"width": 30
+				"height": 25
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "TQLabel"
+				"text": "Time Quantum"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 95
+				"y": 110
+				"height": 25
+				"width": 70
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 25, 10 )
+			"size": new java.awt.Dimension( 440, 345 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "AlgorithmSelector"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 15, 390 )
+		} )
+	}
+}

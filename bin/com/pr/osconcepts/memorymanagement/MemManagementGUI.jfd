@@ -1,0 +1,411 @@
+JFDML JFormDesigner: "5.2.2.2.228" Java: "1.8.0_77" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			"title": "Memory Management"
+			"$sizePolicy": 1
+			"$locationPolicy": 1
+			"resizable": false
+			"defaultCloseOperation": 2
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "ContinousLayout"
+				"border": new javax.swing.border.TitledBorder( "Continous" )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "BaseLB"
+					"text": "Base"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 10
+					"y": 20
+					"height": 20
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "BaseTF"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "BaseTFKeyReleased", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 45
+					"y": 20
+					"width": 50
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "LimitLB"
+					"text": "Limit"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 10
+					"y": 45
+					"height": 20
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "LimitTF"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "LimitTFKeyReleased", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 45
+					"y": 45
+					"width": 50
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "LogicAddLB"
+					"text": "Logical Address"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"height": 20
+					"x": 10
+					"y": 75
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "LogicAddTF"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "LogicAddTFKeyReleased", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 50
+					"height": 20
+					"x": 100
+					"y": 75
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "PhyAddLB"
+					"text": "Physical Address"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"height": 20
+					"x": 10
+					"y": 100
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "PhyAddTF"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "PhyAddTFKeyReleased", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 50
+					"height": 20
+					"x": 100
+					"y": 100
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "isValidLB"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 15
+					"y": 125
+					"width": 140
+					"height": 20
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 215
+				"height": 150
+				"x": 0
+				"y": 5
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) {
+				"autoSize": false
+			} ) {
+				name: "NonContLayout"
+				"border": new javax.swing.border.TitledBorder( "Non-Continous" )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label1"
+					"text": "Page Table"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 16
+					"y": 10
+					"height": 20
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "LogicAddLB2"
+					"text": "Logical Address"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 74
+					"height": 20
+					"x": 80
+					"y": 60
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "LogicAddTF2"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "LogicAddTF2KeyReleased", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 50
+					"height": 20
+					"x": 165
+					"y": 60
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "PhyAddLB2"
+					"text": "Physical Address"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 80
+					"height": 20
+					"x": 80
+					"y": 90
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "PhyAddTF2"
+					"editable": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 50
+					"height": 20
+					"x": 165
+					"y": 90
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "FramsizeLB"
+					"text": "Frame Size"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 74
+					"height": 20
+					"x": 80
+					"y": 30
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "FramsizeTF"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "FramsizeTFKeyReleased", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 50
+					"height": 20
+					"x": 165
+					"y": 30
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "PageLB"
+					"text": "Pages"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 74
+					"height": 20
+					"x": 80
+					"y": 120
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "PageTF"
+					"editable": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 50
+					"height": 20
+					"x": 165
+					"y": 120
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "label2"
+					"text": ">>"
+					"font": new java.awt.Font( "Arial", 0, 12 )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 215
+					"y": 60
+					"width": 20
+					"height": 20
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "p_offset"
+					"editable": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 230
+					"y": 60
+					"width": 63
+					"height": 20
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "KBCombo"
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "bytes"
+						addElement( "bytes" )
+						addElement( "KB" )
+						addElement( "MB" )
+					}
+					addEvent( new FormEvent( "java.awt.event.ItemListener", "itemStateChanged", "KBComboItemStateChanged", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 230
+					"y": 30
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "PTSP"
+					"horizontalScrollBarPolicy": 31
+					add( new FormComponent( "javax.swing.JEditorPane" ) {
+						name: "PageTableData"
+						addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "PageTableDataKeyReleased", true ) )
+					} )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 10
+					"y": 30
+					"height": 110
+					"width": 65
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 297
+				"height": 150
+				"x": 220
+				"y": 5
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "AddTransCacheLayout"
+				"border": new javax.swing.border.TitledBorder( "Address Translation With Cache" )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "CachetimeLB"
+					"text": "Cache Access Time"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 10
+					"y": 20
+					"width": 105
+					"height": 20
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "CacheTimeTF"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "CacheTimeTFKeyReleased", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 130
+					"y": 20
+					"width": 80
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "MemtimeLB"
+					"text": "Memory Access Time"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 105
+					"height": 20
+					"x": 10
+					"y": 45
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "MemtimeTF"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "MemtimeTFKeyReleased", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 80
+					"height": 20
+					"x": 130
+					"y": 45
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "HitrateLB"
+					"text": "Hit rate"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 105
+					"height": 20
+					"x": 10
+					"y": 70
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "HitrateTF"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "HitrateTFKeyReleased", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 80
+					"height": 20
+					"x": 130
+					"y": 70
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "EATLB"
+					"text": "EAT"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 105
+					"height": 20
+					"x": 10
+					"y": 105
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "EATTF"
+					"editable": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 80
+					"height": 20
+					"x": 130
+					"y": 105
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 0
+				"y": 160
+				"width": 215
+				"height": 140
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+				name: "EATLayout2"
+				"border": new javax.swing.border.TitledBorder( "Page Fault Handling" )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "PFHandlingLB"
+					"text": "Page Fault Handling Time"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 10
+					"y": 20
+					"height": 20
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "PFHandlingTF"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "PFHandlingTFKeyReleased", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 135
+					"y": 20
+					"width": 80
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "MemtimePFLB"
+					"text": "Memory Access Time"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 105
+					"height": 20
+					"x": 10
+					"y": 45
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "MemtimePFTF"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "MemtimePFTFKeyReleased", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 80
+					"height": 20
+					"x": 135
+					"y": 45
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "PFrateLB"
+					"text": "Page Fault rate"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 105
+					"height": 20
+					"x": 10
+					"y": 70
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "PFrateTF"
+					addEvent( new FormEvent( "java.awt.event.KeyListener", "keyReleased", "PFrateTFKeyReleased", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 80
+					"height": 20
+					"x": 135
+					"y": 70
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "EATPFLb"
+					"text": "EAT"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"height": 20
+					"x": 10
+					"y": 105
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "EATPFTF"
+					"editable": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"width": 70
+					"height": 20
+					"x": 35
+					"y": 105
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "ReducePLB"
+					"text": "Reduce Performance"
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 115
+					"y": 105
+					"height": 20
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "ReducePTF"
+					"editable": false
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+					"x": 220
+					"y": 105
+					"width": 70
+				} )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 297
+				"height": 140
+				"x": 220
+				"y": 160
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 530, 335 )
+		} )
+	}
+}

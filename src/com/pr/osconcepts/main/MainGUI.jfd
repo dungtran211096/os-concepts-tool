@@ -1,0 +1,137 @@
+JFDML JFormDesigner: "5.2.2.2.228" Java: "1.8.0_77" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class com.jformdesigner.runtime.NullLayout ) ) {
+			name: "this"
+			"title": "Trần Anh"
+			"$sizePolicy": 1
+			"resizable": false
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "SchedulingBTN"
+				"text": "<html>Scheduling<br />Algorithm</html>"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "SchedulingBTNActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 5
+				"y": 5
+				"width": 85
+				"height": 85
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "BankerBTN"
+				"text": "<html>Banker's<br />Algorithm</html>"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "BankerBTNActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 85
+				"height": 85
+				"x": 95
+				"y": 5
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "ResReqBTN"
+				"text": "<html>Request<br />Resources</html>"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "ResReqBTNActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 85
+				"height": 85
+				"x": 185
+				"y": 5
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "MoreBTN"
+				"text": "More..."
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "MoreBTNActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 85
+				"height": 85
+				"x": 5
+				"y": 185
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "DeadlockDectBTN"
+				"text": "<html>Deadlock<br />Detection</html>"
+				"horizontalTextPosition": 0
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "DeadlockDectBTNActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 85
+				"height": 85
+				"x": 5
+				"y": 95
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "MoreBTN2"
+				"text": "More..."
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "MoreBTN2ActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 95
+				"y": 185
+				"height": 85
+				"width": 85
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "MemManagementBTN"
+				"text": "<html>Memory<br />Management</html>"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "MemManagementBTNActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 95
+				"y": 95
+				"height": 85
+				"width": 85
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "PageReplBTN"
+				"text": "<html>Page<br />Replacement</html>"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "PageReplBTNActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 85
+				"height": 85
+				"x": 185
+				"y": 95
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "MoreBTN3"
+				"text": "More..."
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "MoreBTN3ActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"width": 85
+				"height": 85
+				"x": 185
+				"y": 185
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "StatusLB"
+				"horizontalAlignment": 0
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 5
+				"y": 270
+				"width": 265
+				"height": 20
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar"
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "menu1"
+					"text": "Operating System Concepts Tool                "
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "HelpMenu"
+					"text": "Help"
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "ReportBugMenuItem"
+						"text": "Report Problem"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "ReportBugMenuItemActionPerformed", true ) )
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "AboutMenuItem"
+						"text": "About"
+						addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "AboutMenuItemActionPerformed", true ) )
+					} )
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 85, 0 )
+			"size": new java.awt.Dimension( 280, 340 )
+		} )
+	}
+}
