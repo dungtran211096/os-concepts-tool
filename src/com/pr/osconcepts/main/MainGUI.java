@@ -56,9 +56,7 @@ public class MainGUI extends JFrame {
 		for (int i = 0; i<num_of_fn;i++) unlock.add(false);
 	}
 	private void Unlock(){
-		String code="Unlock All";
-		//TODO Lock or Unlock
-		//code = this.getCode();
+		String code = this.getCode();
 		
 		this.StatusLB.setText("Status: " + code);
 		switch (code){
